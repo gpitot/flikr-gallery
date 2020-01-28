@@ -8,6 +8,7 @@ const BASE =
 //request photos from flikr
 const loadPhotos = ({ query, limit = 20 }) => {
   return new Promise((resolve, reject) => {
+    if (query === null) return resolve([]);
     const url = `${BASE}&api_key=${FLIKR_SECRET}&tags=${query}&per_page=${limit}&format=json&nojsoncallback=1`;
     console.log(url);
     axios
