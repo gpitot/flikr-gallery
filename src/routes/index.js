@@ -8,6 +8,7 @@ class Routes extends Component {
       <BrowserRouter>
         <Switch>
           <Route exact path="/" component={Searched} />
+          <Route exact path="/search" component={Searched} />
           <Route path="/search/:query" component={Searched} />
 
           <Route component={PageNotFound} />
